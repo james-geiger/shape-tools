@@ -111,7 +111,7 @@ script: |
             polygon.setAttributeNS(null, 'points', polygonSVGPoints);
             path.parentNode.replaceChild(polygon, path);
     
-            cssPolygons.push('<li>', path.getAttribute('id'), ', POLYGON((', pointCommandsToCSSPoints(points, settings), '))', '</li>');
+            cssPolygons.push('<li>', path.getAttribute('id'), ';POLYGON((', pointCommandsToCSSPoints(points, settings), '))', '</li>');
         }
         cssPolygons.push('</ul>');
         document.getElementById('output').innerHTML = cssPolygons.join('');
